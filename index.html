@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikepaths Explorer</title>
-    <link rel="stylesheet" href="global.css" />
+
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="map.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="map.js" type="module"></script>
   </head>
   <body>
     <h1>🚴🏼‍♀️ Bikepaths Explorer</h1>
-    <p>An interactive map of Boston bike traffic with BlueBikes and city data.</p>
+    <p>Explore Boston's bike lanes and Bluebike stations using this interactive map.</p>
+    <div id="map">
+      <svg></svg>
+    </div>
   </body>
 </html>
+
