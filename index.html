@@ -13,10 +13,28 @@
   </head>
   <body>
     <h1>🚴🏼‍♀️ Bikepaths Explorer</h1>
+
     <p>Explore Boston's bike lanes and Bluebike stations using this interactive map.</p>
+
+    <header>
+        <label style="margin-left: auto">
+          Filter by time:
+          <input id="time-slider" type="range" min="-1" max="1440" value="-1" />
+          <time id="selected-time"></time>
+          <em id="any-time">(any time)</em>
+        </label>
+      </header>
+      
     <div id="map">
       <svg></svg>
     </div>
+
+    <div class="legend">
+        <div style="--departure-ratio: 1; text-align: left;">More departures</div>
+        <div style="--departure-ratio: 0.5; text-align: center;">Balanced</div>
+        <div style="--departure-ratio: 0; text-align: right;">More arrivals</div>
+    </div>
+      
   </body>
 </html>
 

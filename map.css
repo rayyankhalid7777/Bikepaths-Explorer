@@ -28,6 +28,54 @@ body {
 #map circle {
     pointer-events: auto;
   }
+
+  
+  header {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  
+  label {
+    margin-left: auto;
+  }
+  
+  #selected-time,
+  #any-time {
+    display: block;
+  }
+  
+  #any-time {
+    font-style: italic;
+    color: gray;
+  }
+
+#map circle,
+.legend > div {
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+  fill: var(--color);
+  background: var(--color); /* for legend blocks */
+}
+
+.legend {
+    display: flex;
+    gap: 1px;
+    margin-block: 1em;
+    font-size: 0.9em;
+  }
+  
+.legend > div {
+    flex: 1;
+    padding: 0.25em 1.5em;
+    color: white;
+  }
   
 
   
